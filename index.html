@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO-DO List</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <h1>TO-DO LIST</h1>
+    <div class="todo">
+        <div id="adder">
+            <input type="text" placeholder="Type your task..." id="task-text">
+            <input type="date" id="date">
+            <button id="submit">SUBMIT</button>
+        </div>
+        <div id="tasks">
+        </div>
+        <div class="buttons">
+            <button id="all" data-status="false">ALL</button>
+            <button id="active" data-status="false">ACTIVE</button>
+            <button id="done" data-status="false">DONE</button>
+        </div>
+    </div>
+    <div id="edit-container">
+        <h1>EDIT</h1>
+        <div id="info">
+            <input type="text" placeholder="Type your task..." id="edit-text">
+            <input type="date" id="edit-date">
+            <button id="edit" data-id="" onclick="editSubmit()">EDIT</button>
+        </div>
+    </div>
+    <script src="./main.js"></script>
+    <script src="https://kit.fontawesome.com/ea3edf7906.js" crossorigin="anonymous"></script>
+</body>
+</html>

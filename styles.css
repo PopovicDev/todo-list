@@ -1,0 +1,304 @@
+*, *:before, *:after{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+    border-radius:5px;
+}
+
+html{
+    height:100%;
+}
+
+body{
+    width:100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color:rgb(0,0,0);
+    position: relative;
+}
+
+body h1{
+    color:gold;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight:900;
+}
+
+button{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight:900;
+    outline:none;
+}
+
+.todo{
+    width:70%;
+    padding:15px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color:rgba(15, 15, 15, 0.5);
+    margin-top:50px;
+}
+
+#adder{
+    display:flex;
+    gap:15px;
+    width:70%;
+}
+
+#adder input{
+    border:none;
+    outline:none;
+    padding:15px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight:500;
+}
+
+#edit-container input{
+    border:none;
+    outline:none;
+    padding:15px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight:500;
+}
+
+input[type=text]{
+    width:90%;
+}
+
+#adder button{
+    cursor:pointer;
+    border:none;
+    background-color:gold;
+    padding:15px 45px;
+    width:200px;
+}
+
+#edit-container button{
+    cursor:pointer;
+    border:none;
+    background-color:gold;
+    padding:15px 45px;
+    width:200px;
+}
+
+#tasks{
+    min-height:500px;
+    max-height:500px;
+    overflow-y:scroll;
+    width:70%;
+    border-top:3px solid gold;
+    border-bottom:3px solid gold;
+    border-radius:0px;
+    margin:15px 0;
+    padding:10px;
+}
+
+#tasks::-webkit-scrollbar{
+    width:15px;
+}
+
+#tasks::-webkit-scrollbar-track{
+    background-color:rgba(75,75,75, 0.5);
+}
+
+#tasks::-webkit-scrollbar-thumb{
+    background-color:gold;
+}
+
+#task{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius:0px;
+    padding:10px;
+    border-bottom:1px solid rgb(100,100,100);
+}
+
+#task > h4{
+    color:white;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-width:65ch;
+}
+
+#task-buttons{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap:10px;
+}
+
+#task-buttons > h4{
+    color:gold;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:is(#finish, #editt, #delete){
+    cursor:pointer;
+    border:none;
+    background-color:rgba(75,75,75, 0.5);
+    height:35px;
+    width:35px;
+    color:gold;
+}
+
+#edit-container{
+    width:100%;
+    height:100%;
+    position: absolute;
+    top:0;
+    left:0;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color:rgba(0, 0, 0, 0.98);
+    display:none;
+}
+
+#edit-container h1{
+    padding-bottom:20px;
+}
+
+#info{
+    width:48%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap:20px;
+}
+
+.buttons{
+    display:flex;
+    width:70%;
+    justify-content: space-between;
+    align-items: center;
+    gap:20px;
+}
+
+.buttons button{
+    cursor:pointer;
+    border:2px solid transparent;
+    background-color:gold;
+    padding:15px 45px;
+    width:250px;
+    transition: border-color 100ms, background-color 200ms;
+}
+
+@media only screen and (max-width:600px){
+    .todo{
+        width:100%;
+        padding:5px;
+        margin:0px;
+    }
+
+    #adder{
+        width:90%;
+        flex-direction: column;
+    }
+
+    #info{
+        width:90%;
+        flex-direction: column;
+    }
+
+    #info input{
+        width:100%;
+    }
+
+    #info button{
+        width:100%;
+    }
+
+    #adder input{
+        width:100%;
+    }
+
+    #adder button{
+        width:100%;
+    }
+
+    #tasks{
+        width:90%;
+    }
+
+    #task{
+        flex-direction: column;
+        gap:10px;
+    }
+
+    .buttons{
+        flex-direction: column;
+    }
+}
+
+@media only screen and (min-width:600px){
+    body{
+        height:100dvh;
+    }
+
+    .todo{
+        width:90%;
+        padding:15px;
+    }
+
+    #adder{
+        width:90%;
+    }
+
+    #info{
+        width:90%;
+    }
+
+    #tasks{
+        width:90%;
+    }
+
+    .buttons{
+        width:90%;
+    }
+}
+
+@media only screen and (min-width:768px){
+    .todo{
+        width:80%;
+    }
+
+    #info{
+        width:70%;
+    }
+}
+
+@media only screen and (min-width:992px){
+    .todo{
+        width:90%;
+    }
+
+    #adder{
+        width:70%;
+    }
+
+    #info{
+        width:70%;
+    }
+    
+    #tasks{
+        width:70%;
+    }
+
+    .buttons{
+        width:70%;
+    }
+}
+
+@media only screen and (min-width:1200px){
+    .todo{
+        width:70%;
+    }
+
+    #info{
+        width:48%;
+    }
+}
