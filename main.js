@@ -1,21 +1,3 @@
-/*
-- - - Glavni ciljevi koje bi vaš projekat trebalo da postigne su: - - -
-
-* Mogućnost dodavanja novih zadataka RESENO
-* Mogućnost označavanja zadataka kao završenih RESENO
-* Mogućnost brisanja zadataka RESENO
-* Filtriranje zadataka (svi, aktivni, završeni) RESENO
-* Prikaz liste zadataka na stranici RESENO
-*/
-
-/* 
-- Napravite klasu Task sa svojstvima poput id, text, completed, createdAt. RESENO
-- Implementirajte klasu TaskList koja upravlja nizom zadataka. RESENO
-- Koristite metode niza za dodavanje, brisanje i ažuriranje zadataka.
-- Implementirajte filtere za prikaz svih, završenih i nezavršenih zadataka.
-- Koristite destructuring pri radu sa svojstvima objekata.
-- Bonus: Dodajte mogućnost sortiranja zadataka po datumu ili abecednom redu.
-*/
 class TaskList{
     constructor(){
         if(localStorage.getItem("Tasks") !== null){
